@@ -1,0 +1,15 @@
+<h4>Internal Server Error</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error:{{error.message}}</h5>
+    <div class="font-weight-bold">Note: If you see this, Angular is probabbly not blame</div>
+    <p>What to do next?</p>
+    <ol>
+        <li>
+            Open the Chrome dev tools, then check the failing request in the network tab!
+        </li>
+        <li>Examine the request URL - what API endpoint are you requesting</li>
+        <li>Reproduce the problem in Postman-If we get the same error Angular is 100% not the problem</li>
+    </ol>
+    <p class="font-weight:bold">Following is the stach trace -  the first  few lines will tell you which line of the code cause the issue</p>
+    <code class="mt-5" style="background-color:white-smoke">{{error.details}}</code>
+</ng-container>
